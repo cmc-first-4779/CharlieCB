@@ -28,7 +28,7 @@ public class Robot extends IterativeRobot {
 //	public static final ExampleSubsystem kExampleSubsystem
 //			= new ExampleSubsystem();
 	Command m_autonomousCommand;
-	public static Climber climber;
+	public static final Climber climber = new Climber();
 	public static OI m_oi;
 	
 	
@@ -46,8 +46,7 @@ public class Robot extends IterativeRobot {
 	/*	m_chooser.addDefault("Default Auto", new ExampleCommand());
 		// chooser.addObject("My Auto", new MyAutoCommand());
 		SmartDashboard.putData("Auto mode", m_chooser); */
-		climber = new Climber();
-		
+	
 		SmartDashboard.putData(climber);
 	}
 

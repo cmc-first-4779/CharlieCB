@@ -22,11 +22,11 @@ public class Climber extends Subsystem {
     }
     
     public void climbUp() {
-    	climbMotor.set(-1);	
+    	climbMotor.set(1);	
     }
     
     public void climbDown() {
-    	climbMotor.set(1);
+    	climbMotor.set(-1);
     }
     
     public void climbDoNothing() {

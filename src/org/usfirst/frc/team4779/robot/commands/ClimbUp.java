@@ -11,6 +11,7 @@ public class ClimbUp extends Command {
 
     public ClimbUp() {
     	requires(Robot.climber);
+    	setTimeout(3);
    
     	
     	
@@ -30,8 +31,8 @@ public class ClimbUp extends Command {
 
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {
-       // return isTimedOut();
-    	return false;
+       return isTimedOut();
+    	//return false;
     }
 
     // Called once after isFinished returns true
