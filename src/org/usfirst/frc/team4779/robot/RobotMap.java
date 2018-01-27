@@ -27,6 +27,17 @@ public class RobotMap {
 	public static int climbMotor = 8;
 	public static int sweeper = 9;
 	
+	//These are the buttons on the Joysticks. You can call in other subsystems.
+	public static int aButton = 1;
+	public static int bButton = 2;
+	public static int xButton = 3;
+	public static int yButton = 4;
+	public static int leftBumperButton = 5;
+	public static int rightBumperButton = 6;
+	public static int xAxisStick = 0;
+	public static int yAxisStick = 1;
+	
+	
 	// For example to map the left and right motors, you could define the
 	// following variables to use with your drivetrain subsystem.
 	// public static int leftMotor = 1;
@@ -37,3 +48,5 @@ public class RobotMap {
 	// public static int rangefinderPort = 1;
 	// public static int rangefinderModule = 1;
 }
+
+

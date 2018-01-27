@@ -21,15 +21,10 @@ public class Climber extends Subsystem {
     	setDefaultCommand(new ClimberDoNothing());    
     }
     
-    public void climbUp() {
+    public void climberOn() {
     	climbMotor.set(1);	
     }
-    
-    public void climbDown() {
-    	climbMotor.set(-1);
-    }
-    
-    public void climbDoNothing() {
+    public void climberOff() {
     	climbMotor.set(0);	
     }
     

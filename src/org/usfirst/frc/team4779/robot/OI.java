@@ -7,7 +7,8 @@
 
 package org.usfirst.frc.team4779.robot;
 
-import org.usfirst.frc.team4779.robot.commands.ClimbUp;
+import org.usfirst.frc.team4779.robot.commands.CarouselOn;
+import org.usfirst.frc.team4779.robot.commands.ClimberOn;
 
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.buttons.Button;
@@ -19,12 +20,15 @@ import edu.wpi.first.wpilibj.buttons.JoystickButton;
  */
 public class OI {
 	Joystick driverStick = new Joystick(0);
-	//Joystick operStick = new Joystick(1);//
+	Joystick operStick = new Joystick(1);
 	
 	public OI() {
-		JoystickButton driverStickXButton = new JoystickButton(driverStick,3);
+		JoystickButton operStickYButton = new JoystickButton(operStick,RobotMap.yButton);
+		JoystickButton operStickXButton = new JoystickButton(operStick, RobotMap.xButton);
 		
-		driverStickXButton.whenPressed(new ClimbUp()); 
+		operStickXButton.whenPressed(new CarouselOn());
+		
+		operStickYButton.whenPressed(new ClimberOn()); 
 	}
 	
 	
