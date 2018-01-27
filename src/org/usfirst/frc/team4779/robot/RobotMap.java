@@ -27,6 +27,10 @@ public class RobotMap {
 	public static int climbMotor = 8;
 	public static int sweeper = 9;
 	
+	//Define the Joystick #'s in the DriverStation USB Ports
+	public static int driverStickUSBPort = 0;
+	public static int operStickUSBPort = 1;
+	
 	//These are the buttons on the Joysticks. You can call in other subsystems.
 	public static int aButton = 1;
 	public static int bButton = 2;
@@ -36,6 +40,14 @@ public class RobotMap {
 	public static int rightBumperButton = 6;
 	public static int xAxisStick = 0;
 	public static int yAxisStick = 1;
+	
+	//Define the motor power and direction for each Spark Motor controller
+	public static double carouselMotorPower = -0.2;
+	public static double climberMotorPower = 1.0;
+	public static double shooterMotorPower = 0.5;
+	public static double gobblerOpenMotorPower = 1.0;
+	public static double gobblerCloseMotorPower = -1.0;
+			
 	
 	
 	// For example to map the left and right motors, you could define the

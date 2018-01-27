@@ -16,7 +16,9 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 import org.usfirst.frc.team4779.robot.subsystems.Carousel;
 import org.usfirst.frc.team4779.robot.subsystems.Climber;
+import org.usfirst.frc.team4779.robot.subsystems.Gobbler;
 import org.usfirst.frc.team4779.robot.subsystems.Shooter;
+import org.usfirst.frc.team4779.robot.subsystems.Sweeper;
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -29,9 +31,11 @@ public class Robot extends IterativeRobot {
 //	public static final ExampleSubsystem kExampleSubsystem
 //			= new ExampleSubsystem();
 	Command m_autonomousCommand;
+	public static Sweeper sweeper;
 	public static Shooter shooter;
 	public static Carousel carousel;
 	public static Climber climber;
+	public static Gobbler gobbler;
 	public static OI m_oi;
 	
 	
@@ -45,10 +49,15 @@ public class Robot extends IterativeRobot {
 	 */
 	@Override
 	public void robotInit() {
+		sweeper = new Sweeper();
 		shooter = new Shooter();
 		carousel = new Carousel();
 		climber = new Climber();
+		gobbler = new Gobbler ();
+		
+		//   MUST DEFINE THE OI LAST!!!!!!
 		m_oi = new OI();
+		
 	/*	m_chooser.addDefault("Default Auto", new ExampleCommand());
 		// chooser.addObject("My Auto", new MyAutoCommand());
 		SmartDashboard.putData("Auto mode", m_chooser); */
@@ -138,6 +147,6 @@ public class Robot extends IterativeRobot {
 	 * The log method puts interesting information to the SmartDashboard.
 	 */
 	private void log() {
-		climber.log();
+		//climber.log();
 	}
 }

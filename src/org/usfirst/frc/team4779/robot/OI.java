@@ -9,9 +9,13 @@ package org.usfirst.frc.team4779.robot;
 
 import org.usfirst.frc.team4779.robot.commands.CarouselOn;
 import org.usfirst.frc.team4779.robot.commands.ClimberOn;
+import org.usfirst.frc.team4779.robot.commands.GobblerClose;
+import org.usfirst.frc.team4779.robot.commands.GobblerOpen;
+import org.usfirst.frc.team4779.robot.commands.ShooterOn;
+import org.usfirst.frc.team4779.robot.commands.SweeperOn;
+
 
 import edu.wpi.first.wpilibj.Joystick;
-import edu.wpi.first.wpilibj.buttons.Button;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
 
 /**
@@ -19,16 +23,33 @@ import edu.wpi.first.wpilibj.buttons.JoystickButton;
  * interface to the commands and command groups that allow control of the robot.
  */
 public class OI {
-	Joystick driverStick = new Joystick(0);
-	Joystick operStick = new Joystick(1);
+	
+	//Declare the two joysticks
+	Joystick driverStick = new Joystick(RobotMap.driverStickUSBPort);
+	Joystick operStick = new Joystick(RobotMap.operStickUSBPort);
 	
 	public OI() {
 		JoystickButton operStickYButton = new JoystickButton(operStick,RobotMap.yButton);
 		JoystickButton operStickXButton = new JoystickButton(operStick, RobotMap.xButton);
+		JoystickButton operStickAButton = new JoystickButton(operStick, RobotMap.aButton);
+		JoystickButton operStickBButton = new JoystickButton(operStick, RobotMap.bButton);
+		JoystickButton driverStickLeftBumper = new JoystickButton(driverStick, RobotMap.leftBumperButton);
+		JoystickButton driverStickRightBumper = new JoystickButton(driverStick, RobotMap.rightBumperButton);
 		
+		/*Set up the Oper Stick buttons to call the right commands.
+		 * X turns on the Carousel
+		 * Y turns on the Climber
+		 * A turns on the Sweeper
+		 * B turns on the Shooter
+		 */
 		operStickXButton.whenPressed(new CarouselOn());
-		
 		operStickYButton.whenPressed(new ClimberOn()); 
+		operStickAButton.whenPressed(new SweeperOn());
+		operStickBButton.whenPressed(new ShooterOn());
+		
+		driverStickLeftBumper.whileHeld(new GobblerOpen());
+		driverStickRightBumper.whileHeld(new GobblerClose());
+		
 	}
 	
 	

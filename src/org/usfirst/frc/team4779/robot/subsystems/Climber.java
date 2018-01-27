@@ -1,7 +1,7 @@
 package org.usfirst.frc.team4779.robot.subsystems;
 
 import org.usfirst.frc.team4779.robot.RobotMap;
-import org.usfirst.frc.team4779.robot.commands.ClimberDoNothing;
+import org.usfirst.frc.team4779.robot.commands.ClimberOff;
 
 import edu.wpi.first.wpilibj.Spark;
 import edu.wpi.first.wpilibj.command.Subsystem;
@@ -18,7 +18,7 @@ public class Climber extends Subsystem {
  }
 
     public void initDefaultCommand() {
-    	setDefaultCommand(new ClimberDoNothing());    
+    	setDefaultCommand(new ClimberOff());    
     }
     
     public void climberOn() {
