@@ -15,7 +15,17 @@ package org.usfirst.frc.team4779.robot;
  */
 public class RobotMap {
 	
+	//  Map out all of the Spark Controllers to each of the PWM ports on the RoboRIO.
+	public static int shooter = 0;
+	public static int rearLeftDrive = 1;
+	public static int rightRearDrive = 2;
+	public static int frontLeftDrive = 3;
+	public static int frontRightDrive = 4;
+	public static int carousel = 5;
+	public static int gobbler = 6;
+	//PWM Port #7 is empty.  Nothing is plugged in.
 	public static int climbMotor = 8;
+	public static int sweeper = 9;
 	
 	// For example to map the left and right motors, you could define the
 	// following variables to use with your drivetrain subsystem.
