@@ -44,7 +44,7 @@ public class RobotMap {
 	//Define the motor power and direction for each Spark Motor controller
 	public static double carouselMotorPower = -0.2;
 	public static double climberMotorPower = 1.0;
-	public static double shooterMotorPower = 0.5;
+	public static double shooterMotorPower = 0.7;
 	public static double gobblerOpenMotorPower = 1.0;
 	public static double gobblerCloseMotorPower = -1.0;
 			
