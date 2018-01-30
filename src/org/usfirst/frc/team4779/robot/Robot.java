@@ -16,6 +16,7 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 import org.usfirst.frc.team4779.robot.subsystems.Carousel;
 import org.usfirst.frc.team4779.robot.subsystems.Climber;
+import org.usfirst.frc.team4779.robot.subsystems.DriveTrain;
 import org.usfirst.frc.team4779.robot.subsystems.Gobbler;
 import org.usfirst.frc.team4779.robot.subsystems.Shooter;
 import org.usfirst.frc.team4779.robot.subsystems.Sweeper;
@@ -36,6 +37,7 @@ public class Robot extends IterativeRobot {
 	public static Carousel carousel;
 	public static Climber climber;
 	public static Gobbler gobbler;
+	public static DriveTrain driveTrain;
 	public static OI m_oi;
 	
 	
@@ -49,6 +51,7 @@ public class Robot extends IterativeRobot {
 	 */
 	@Override
 	public void robotInit() {
+		driveTrain = new DriveTrain();
 		sweeper = new Sweeper();
 		shooter = new Shooter();
 		carousel = new Carousel();

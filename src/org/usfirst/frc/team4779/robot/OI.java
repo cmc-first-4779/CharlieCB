@@ -36,6 +36,7 @@ public class OI {
 		JoystickButton driverStickLeftBumper = new JoystickButton(driverStick, RobotMap.leftBumperButton);
 		JoystickButton driverStickRightBumper = new JoystickButton(driverStick, RobotMap.rightBumperButton);
 		
+		
 		/*Set up the Oper Stick buttons to call the right commands.
 		 * X turns on the Carousel
 		 * Y turns on the Climber
@@ -51,7 +52,9 @@ public class OI {
 		driverStickRightBumper.whileHeld(new GobblerClose());
 		
 	}
-	
+	 public Joystick getDriverStick() {
+		return driverStick;
+	 }
 	
 	
 	//// CREATING BUTTONS

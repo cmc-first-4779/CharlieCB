@@ -18,7 +18,7 @@ public class RobotMap {
 	//  Map out all of the Spark Controllers to each of the PWM ports on the RoboRIO.
 	public static int shooter = 0;
 	public static int rearLeftDrive = 1;
-	public static int rightRearDrive = 2;
+	public static int rearRightDrive = 2;
 	public static int frontLeftDrive = 3;
 	public static int frontRightDrive = 4;
 	public static int carousel = 5;
