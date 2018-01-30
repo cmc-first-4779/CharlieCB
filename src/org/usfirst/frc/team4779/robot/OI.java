@@ -11,6 +11,7 @@ import org.usfirst.frc.team4779.robot.commands.CarouselOn;
 import org.usfirst.frc.team4779.robot.commands.ClimberOn;
 import org.usfirst.frc.team4779.robot.commands.GobblerClose;
 import org.usfirst.frc.team4779.robot.commands.GobblerOpen;
+import org.usfirst.frc.team4779.robot.commands.Shoot;
 import org.usfirst.frc.team4779.robot.commands.ShooterOn;
 import org.usfirst.frc.team4779.robot.commands.SweeperOn;
 
@@ -46,7 +47,7 @@ public class OI {
 		operStickXButton.whenPressed(new CarouselOn());
 		operStickYButton.whenPressed(new ClimberOn()); 
 		operStickAButton.whenPressed(new SweeperOn());
-		operStickBButton.whenPressed(new ShooterOn());
+		operStickBButton.whenPressed(new Shoot());
 		
 		driverStickLeftBumper.whileHeld(new GobblerOpen());
 		driverStickRightBumper.whileHeld(new GobblerClose());

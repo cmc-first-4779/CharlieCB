@@ -9,9 +9,9 @@ import edu.wpi.first.wpilibj.command.Command;
  */
 public class ShooterOn extends Command {
 
-    public ShooterOn() {
+    public ShooterOn(int time) {
     	requires(Robot.shooter);
-    	setTimeout(10);
+    	setTimeout(time);
     }
  // Called just before this Command runs the first time
     protected void initialize() {
