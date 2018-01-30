@@ -103,6 +103,7 @@ public class Robot extends IterativeRobot {
 		//m_autonomousCommand = m_chooser.getSelected();
 
 		/*
+		 * Auton no problem!
 		 * String autoSelected = SmartDashboard.getString("Auto Selector",
 		 * "Default"); switch(autoSelected) { case "My Auto": autonomousCommand
 		 * = new MyAutoCommand(); break; case "Default Auto": default:
