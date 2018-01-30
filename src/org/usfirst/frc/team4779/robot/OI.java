@@ -52,6 +52,10 @@ public class OI {
 		
 	}
 	
+	public Joystick getDriverStick() {
+		return driverStick;
+	}
+	
 	
 	
 	//// CREATING BUTTONS
