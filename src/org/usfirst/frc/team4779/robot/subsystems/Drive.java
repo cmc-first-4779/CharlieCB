@@ -33,7 +33,8 @@ public class Drive extends Subsystem {
     }
     
     public void arcadeDrive(double yAxis, double xAxis) {
-    	myDrive.arcadeDrive(yAxis, xAxis);
+    	System.out.println(yAxis);
+    	myDrive.arcadeDrive(yAxis, -xAxis);
     }	
     
     public void stop() {

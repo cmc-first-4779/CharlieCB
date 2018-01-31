@@ -56,7 +56,7 @@ public class Robot extends IterativeRobot {
 		carousel = new Carousel();
 		climber = new Climber();
 		gobbler = new Gobbler ();
-		
+		drive = new Drive();
 		//   MUST DEFINE THE OI LAST!!!!!!
 		m_oi = new OI();
 		
@@ -65,6 +65,7 @@ public class Robot extends IterativeRobot {
 		SmartDashboard.putData("Auto mode", m_chooser); */
 	
 		SmartDashboard.putData(climber);
+		SmartDashboard.putData(drive);
 	}
 
 	/**
