@@ -7,30 +7,28 @@ import edu.wpi.first.wpilibj.command.Command;
 /**
  *
  */
-public class ShooterOn extends Command {
+public class arcadeDriveWithGyro extends Command {
 
-    public ShooterOn(int time) {
-    	requires(Robot.shooter);
-    	setTimeout(time);
+    public arcadeDriveWithGyro() {
+       requires(Robot.driveTrain);
     }
-    public ShooterOn() {
-    	requires(Robot.shooter);
 
-    }
- // Called just before this Command runs the first time
+    // Called just before this Command runs the first time
     protected void initialize() {
-    	Robot.shooter.shooterOn();
+    	Robot.driveTrain.resetGyro();
     }
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	Robot.shooter.shooterOn();
+    	Robot.driveTrain.arcadeDriveWithGryo();
     }
 
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {
-        return isTimedOut();
+        return false;
     }
+
+    // Called once after isFinished returns true
     protected void end() {
     }
 

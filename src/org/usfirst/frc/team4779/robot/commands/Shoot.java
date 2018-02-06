@@ -10,6 +10,6 @@ public class Shoot extends CommandGroup {
     public Shoot() {
     	addSequential(new ShooterOn(2));
     	addParallel(new CarouselOn());
-    	addParallel(new ShooterOn(10));
+    	addParallel(new ShooterOn());
     }
 }

@@ -66,6 +66,8 @@ public class Robot extends IterativeRobot {
 		// chooser.addObject("My Auto", new MyAutoCommand());
 		SmartDashboard.putData("Auto mode", m_chooser); */
 	
+		Robot.driveTrain.resetGyro();
+		Robot.driveTrain.calibrateGyro();
 		SmartDashboard.putData(climber);
 	}
 
