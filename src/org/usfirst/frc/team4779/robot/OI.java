@@ -14,7 +14,8 @@ import org.usfirst.frc.team4779.robot.commands.GobblerOpen;
 import org.usfirst.frc.team4779.robot.commands.Shoot;
 import org.usfirst.frc.team4779.robot.commands.ShooterOn;
 import org.usfirst.frc.team4779.robot.commands.SweeperOn;
-import org.usfirst.frc.team4779.robot.commands.arcadeDriveWithGyro;
+import org.usfirst.frc.team4779.robot.commands.TurnRight;
+import org.usfirst.frc.team4779.robot.commands.DriveStraight;
 
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
@@ -37,6 +38,7 @@ public class OI {
 		JoystickButton driverStickLeftBumper = new JoystickButton(driverStick, RobotMap.leftBumperButton);
 		JoystickButton driverStickRightBumper = new JoystickButton(driverStick, RobotMap.rightBumperButton);
 		JoystickButton driverStickBButton = new JoystickButton(driverStick, RobotMap.bButton);
+		JoystickButton driverStickAButton = new JoystickButton(driverStick, RobotMap.aButton);
 		
 		
 		/*Set up the Oper Stick buttons to call the right commands.
@@ -49,7 +51,8 @@ public class OI {
 		operStickYButton.whenPressed(new ClimberOn()); 
 		operStickAButton.whenPressed(new SweeperOn());
 		operStickBButton.whileHeld(new Shoot());
-		driverStickBButton.whileHeld(new arcadeDriveWithGyro());
+		driverStickBButton.whileHeld(new DriveStraight());
+		driverStickAButton.whenPressed(new TurnRight());
 		
 		driverStickLeftBumper.whileHeld(new GobblerOpen());
 		driverStickRightBumper.whileHeld(new GobblerClose());

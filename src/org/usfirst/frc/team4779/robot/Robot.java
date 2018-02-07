@@ -15,6 +15,8 @@ import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 import org.usfirst.frc.team4779.robot.commands.Shoot;
+import org.usfirst.frc.team4779.robot.commands.DriveStraight;
+import org.usfirst.frc.team4779.robot.commands.DriveTest;
 import org.usfirst.frc.team4779.robot.subsystems.Carousel;
 import org.usfirst.frc.team4779.robot.subsystems.Climber;
 import org.usfirst.frc.team4779.robot.subsystems.DriveTrain;
@@ -69,6 +71,7 @@ public class Robot extends IterativeRobot {
 		Robot.driveTrain.resetGyro();
 		Robot.driveTrain.calibrateGyro();
 		SmartDashboard.putData(climber);
+		SmartDashboard.putData(driveTrain);
 	}
 
 	/**
@@ -100,8 +103,9 @@ public class Robot extends IterativeRobot {
 	@Override
 	public void autonomousInit() {
 		
-		m_autonomousCommand = new Shoot();
+		m_autonomousCommand = new DriveTest();
 		m_autonomousCommand.start();
+		
 		//m_autonomousCommand = m_chooser.getSelected();
 
 		/*

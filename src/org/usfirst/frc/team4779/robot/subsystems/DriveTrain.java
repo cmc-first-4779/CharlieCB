@@ -45,19 +45,28 @@ public class DriveTrain extends Subsystem {
     	myDrive.arcadeDrive(0,0);
     }
     
-    public void arcadeDriveWithGryo() {
+    public void driveStraight() {
 		SmartDashboard.putNumber("Gryo Angle", gyro.getAngle());
     	double angle = gyro.getAngle();
     	System.out.println("Angle: " + angle);
     	myDrive.arcadeDrive(-.7, Kp*angle );
     }    
-    
+    public void turnRight() {
+    	myDrive.arcadeDrive(0,-.5);
+    	SmartDashboard.putNumber("Gryo Angle", gyro.getAngle());
+    }
+    public void turnLeft() {
+    	myDrive.arcadeDrive(0,.5);
+    	 }
     public void calibrateGyro () {
     	gyro.calibrate();
     	System.out.println("Calibration of Gyro Complete");
     }
     public void resetGyro() {
     	gyro.reset();
+    }
+    public double getGyroAngle() {
+    	return gyro.getAngle();
     }
 }
 
