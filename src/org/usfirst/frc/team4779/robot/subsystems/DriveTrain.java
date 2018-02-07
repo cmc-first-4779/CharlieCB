@@ -27,6 +27,10 @@ public class DriveTrain extends Subsystem {
 
 	ADXRS450_Gyro gyro = new ADXRS450_Gyro();
 	double Kp = .4;
+	double threshold = 3;
+	double forward = 0;
+	double currentAngle = gyro.getAngle();
+	double rotation= 0;
 	
 	public DriveTrain() {
 		super("DriveTrain");
@@ -68,5 +72,32 @@ public class DriveTrain extends Subsystem {
     public double getGyroAngle() {
     	return gyro.getAngle();
     }
-}
+    public boolean rotateToAngle(double targetAngle) {
+    	double error = targetAngle - gyro.getAngle();
+    	if (error> threshold) {
+    		this.rotation = error*Kp;
+    		return false;
+    	}
+    	else {
+    		this.rotation = 0;
+    		return true;
+    		
+    	}}
+    public void move(double forward, double rotation) {
+    	this.forward = forward;
+    	this.rotation = rotation;
+    }
+    
+    public void execute() {
+    	myDrive.arcadeDrive(forward, rotation);
+    }
+    }
+    
+    
+    
+    	
+    
+    	
+  
+
 
